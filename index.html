@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portafolio de desarrollo de software minimalista" />
-  <title>Vicente Herrera — Software Developer</title>
+  <meta name="description" content="Portafolio de Vicente Herrera, Backend Developer" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>vh.dev</title>
 
   <!-- Tipografías: Inter (Lectura) + JetBrains Mono (Código y Fechas) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -23,6 +24,7 @@
         <nav class="nav">
           <a href="#proyectos">Proyectos</a>
           <a href="#experiencia">Experiencia</a>
+          <a href="#tecnologias">Tecnologías</a>
           <a href="#contacto">Contacto</a>
         </nav>
         <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">◐</button>
@@ -33,34 +35,86 @@
       <!-- Hero / Bio -->
       <section class="hero">
         <h1 class="name">Vicente Herrera</h1>
-        <p class="role">Software Developer</p>
+        <p class="role">Backend Developer · Estudiante de Ingeniería en Informática</p>
         <p class="bio">
-          Especializado en arquitectura backend, servicios en contenedores y desarrollo de interfaces web minimalistas de alto rendimiento.
+          Estudiante de Ingeniería en Informática en Duoc UC (Puerto Varas, Chile), enfocado en el desarrollo de sistemas backend
+          eficientes y escalables. Experiencia práctica construyendo arquitecturas robustas con Go y Spring Boot, integrando
+          servicios de mensajería, bases de datos relacionales y APIs en tiempo real. Con sólidos conocimientos en contenedores
+          y metodologías ágiles.
         </p>
       </section>
 
-      <!-- Sección Proyectos (Estilo Paco Coursey / Lee Rob) -->
+      <!-- Sección Proyectos -->
       <section id="proyectos" class="section">
         <h2 class="section-title">Proyectos</h2>
 
         <div class="project-list">
           <article class="project-card">
             <div class="project-meta">
-              <span class="project-year">2026</span>
+              <span class="project-year">2026 · En producción</span>
               <div class="project-tags">
-                <span>Docker</span>
-                <span>Node.js</span>
+                <span>Go</span>
+                <span>React Native</span>
                 <span>PostgreSQL</span>
+                <span>Redis</span>
+                <span>WebSockets</span>
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-title">API REST Containerizada</h3>
+              <h3 class="project-title">Plop — Plataforma Multiplataforma E2E</h3>
               <p class="project-desc">
-                Infraestructura backend desacoplada orientada a microservicios con despliegue automatizado y monitoreo de dependencias.
+                API REST de alto rendimiento en Go 1.25 con PostgreSQL/Supabase y caché en Redis. WebSockets asíncronos para chat
+                en tiempo real, seguridad stateless con JWT/OAuth2, frontend con React Native 0.81 y Expo (FlashList, Zustand,
+                notificaciones push). Transacciones firmadas con HMAC-SHA256 vía Flow, integraciones externas (Deezer, TVMaze) y
+                despliegue con Docker Compose, Caddy, Render y Vercel.
               </p>
               <div class="project-links">
+                <a href="https://plop.dpdns.org" target="_blank" rel="noopener noreferrer" class="link">Demo ↗</a>
                 <a href="https://github.com/bulletformyvalentinefan" target="_blank" rel="noopener noreferrer" class="link">GitHub ↗</a>
-                <a href="#" target="_blank" rel="noopener noreferrer" class="link">Demo ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span class="project-year">2026</span>
+              <div class="project-tags">
+                <span>Java 21</span>
+                <span>WebFlux</span>
+                <span>Kafka</span>
+                <span>R2DBC</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">SpringBank — Account Service</h3>
+              <p class="project-desc">
+                Ecosistema financiero basado en microservicios reactivos. Gestión de cuentas bancarias y saldos en tiempo real
+                con programación no bloqueante (Spring WebFlux), persistencia asíncrona (R2DBC + PostgreSQL) y mensajería con Kafka y Redis.
+              </p>
+              <div class="project-links">
+                <a href="https://github.com/bulletformyvalentinefan/springbank" target="_blank" rel="noopener noreferrer" class="link">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span class="project-year">2026</span>
+              <div class="project-tags">
+                <span>Spring Modulith</span>
+                <span>RabbitMQ</span>
+                <span>PostgreSQL</span>
+                <span>JWT</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Gym API — Modular Monolith</h3>
+              <p class="project-desc">
+                API de gestión de gimnasios bajo Monolito Modular con Spring Modulith y Arquitectura de Eventos (EDA).
+                Desacopla socios, membresías y facturación mediante RabbitMQ, con seguridad stateless (JWT + BCrypt) y registro de eventos persistente.
+              </p>
+              <div class="project-links">
+                <a href="https://github.com/bulletformyvalentinefan/api-gym" target="_blank" rel="noopener noreferrer" class="link">GitHub ↗</a>
               </div>
             </div>
           </article>
@@ -69,39 +123,110 @@
             <div class="project-meta">
               <span class="project-year">2025</span>
               <div class="project-tags">
-                <span>TypeScript</span>
-                <span>Supabase</span>
-                <span>Vite</span>
+                <span>Spring Boot</span>
+                <span>Spring Security</span>
+                <span>Docker</span>
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-title">Core Web Platform</h3>
+              <h3 class="project-title">Expense Tracker</h3>
               <p class="project-desc">
-                Aplicación web con autenticación centralizada, sincronización de base de datos en tiempo real y componentes optimizados.
+                Aplicación full-stack de gestión de gastos implementada con Spring Boot y Spring Security.
+                Autenticación y registro de usuarios, CRUD de gastos y categorías, y despliegue orquestado con Docker Compose.
               </p>
               <div class="project-links">
-                <a href="https://github.com/bulletformyvalentinefan" target="_blank" rel="noopener noreferrer" class="link">GitHub ↗</a>
+                <a href="https://github.com/bulletformyvalentinefan/expense-tracker" target="_blank" rel="noopener noreferrer" class="link">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span class="project-year">2026</span>
+              <div class="project-tags">
+                <span>Java 21</span>
+                <span>Spring Data JPA</span>
+                <span>H2</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">EduCore — Gestión Académica</h3>
+              <p class="project-desc">
+                Microservicio backend para administración de registros académicos con patrón Controller-Service-Repository.
+                CRUD de cursos, estudiantes y profesores con validaciones Jakarta y persistencia con Spring Data JPA.
+              </p>
+              <div class="project-links">
+                <a href="https://github.com/bulletformyvalentinefan/educ-core" target="_blank" rel="noopener noreferrer" class="link">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <span class="project-year">2026</span>
+              <div class="project-tags">
+                <span>opencode</span>
+                <span>Security</span>
+                <span>SAST</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Vulnerability Analyst</h3>
+              <p class="project-desc">
+                Skill de auditoría de seguridad (SAST) para opencode. Escanea código fuente, repositorios Git, dependencias y configuración de APIs,
+                y produce un reporte estructurado sin modificar archivos.
+              </p>
+              <div class="project-links">
+                <a href="https://github.com/bulletformyvalentinefan/vulnerability-analyst" target="_blank" rel="noopener noreferrer" class="link">GitHub ↗</a>
               </div>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- Stack & Tecnologías (Estilo Shu Ding) -->
+      <!-- Experiencia Laboral y Formación -->
       <section id="experiencia" class="section">
+        <h2 class="section-title">Experiencia</h2>
+        <div class="stack-grid">
+          <div class="stack-col">
+            <span class="stack-label">Asistente de Informática en Gestión de Eventos</span>
+            <p>Duoc UC · Mar 2026 — Actualidad</p>
+            <p>Despliegue, configuración y soporte técnico de infraestructura de conectividad, equipos informáticos y sistemas audiovisuales para eventos institucionales. Resolución de incidencias en tiempo real.</p>
+          </div>
+          <div class="stack-col">
+            <span class="stack-label">Auxiliar de Carnicería y Reponedor</span>
+            <p>Walmart Chile · Feb 2025 — Mar 2025</p>
+            <p>Recepción de productos, control de inventario y atención al cliente bajo estándares operativos estrictos.</p>
+          </div>
+          <div class="stack-col">
+            <span class="stack-label">Formación</span>
+            <p>Ingeniería en Informática — Duoc UC, Chile (2025 — 2029)</p>
+            <p>Enseñanza Media Completa — Colegio Terravida, Puerto Varas</p>
+          </div>
+          <div class="stack-col">
+            <span class="stack-label">Certificaciones</span>
+            <p>Microsoft Certified: Azure Fundamentals (AZ-900) — Microsoft · Ene 2026</p>
+            <p>Scrum Product Owner Professional (SPOPC®) — CertiProf · Dic 2025</p>
+            <p>Idiomas: Español (nativo) · Inglés (intermedio técnico)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stack & Tecnologías -->
+      <section id="tecnologias" class="section">
         <h2 class="section-title">Tecnologías</h2>
         <div class="stack-grid">
           <div class="stack-col">
-            <span class="stack-label">Lenguajes</span>
-            <p>TypeScript, JavaScript, HTML5, CSS3, SQL</p>
+            <span class="stack-label">Lenguajes y Frameworks</span>
+            <p>Go, Java, SQL, JavaScript, TypeScript · Spring Boot, React Native, Expo, React</p>
           </div>
           <div class="stack-col">
-            <span class="stack-label">Backend & Cloud</span>
-            <p>Node.js, Docker, PostgreSQL, Supabase, REST APIs</p>
+            <span class="stack-label">Infraestructura y Datos</span>
+            <p>Docker, Docker Compose, Supabase, PostgreSQL, Redis, WebSockets, JWT, REST APIs</p>
           </div>
           <div class="stack-col">
-            <span class="stack-label">Herramientas</span>
-            <p>Git, GitHub, Linux, PowerShell, CI/CD, Vite</p>
+            <span class="stack-label">Herramientas y Metodologías</span>
+            <p>Git, GitHub, Postman, OpenTelemetry, Scrum, IntelliJ IDEA</p>
           </div>
         </div>
       </section>
@@ -109,17 +234,17 @@
       <!-- Contacto Directo -->
       <section id="contacto" class="section">
         <h2 class="section-title">Conectar</h2>
-        <p class="contact-desc">Abierto a proyectos de software, colaboraciones y consultoría técnica.</p>
+        <p class="contact-desc">Abierto a oportunidades como Backend Developer, colaboraciones y proyectos de software.</p>
         <div class="social-links">
           <a href="https://github.com/bulletformyvalentinefan" target="_blank" rel="noopener noreferrer" class="link">GitHub ↗</a>
-          <a href="mailto:tuemail@ejemplo.com" class="link">Email ↗</a>
-          <a href="#" target="_blank" rel="noopener noreferrer" class="link">LinkedIn ↗</a>
+          <a href="https://www.linkedin.com/in/vicente-herrera-solis" target="_blank" rel="noopener noreferrer" class="link">LinkedIn ↗</a>
+          <a href="mailto:v.herrera.dev@outlook.com" class="link">Email ↗</a>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>&copy; 2026 Vicente Herrera. Código abierto bajo licencia MIT.</p>
+      <p>&copy; 2026 Vicente Herrera · vh.dev</p>
     </footer>
   </div>
 
