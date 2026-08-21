@@ -19,17 +19,11 @@ Sitio estático minimalista en blanco y negro con enfoque editorial: filas de pr
 
 ## Ejecutar localmente
 
-No requiere instalación. Abre `index.html` en el navegador o sirve la carpeta con un servidor estático:
+Abre `index.html` en el navegador o sirve la carpeta con un servidor estático:
 
 ```sh
-# Python
-python -m http.server 8000
-
-# Node
 npx serve .
 ```
-
-Luego visita `http://localhost:8000`.
 
 ## Estructura
 
