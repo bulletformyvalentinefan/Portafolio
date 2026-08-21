@@ -14,7 +14,6 @@ Sitio estático minimalista en blanco y negro con enfoque editorial: filas de pr
 
 - Tema claro/oscuro con persistencia en `localStorage` y detección de preferencia del sistema
 - Header sticky con blur (`backdrop-filter`)
-- Favicon SVG de cursor de terminal que se adapta al tema
 - Diseño responsive (móvil / tablet / escritorio)
 - Accesibilidad: `focus-visible` y respeto a `prefers-reduced-motion`
 
@@ -38,7 +37,6 @@ Luego visita `http://localhost:8000`.
 index.html     # Contenido y estructura
 style.css      # Estilos (variables de tema, layout, responsive)
 script.js      # Toggle de tema claro/oscuro
-favicon.svg    # Ícono de la pestaña
 ```
 
 ## Autor

@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 2. Event listener para alternar tema
-  //
   themeToggle.addEventListener('click', () => {
     const currentTheme = root.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
