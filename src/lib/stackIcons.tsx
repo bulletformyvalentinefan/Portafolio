@@ -42,6 +42,8 @@ const map: Record<string, IconType> = {
   spring: SiSpringboot,
   "spring boot": SiSpringboot,
   "oracle 23c": SiPostgresql,
+  spotify: SiNodedotjs,
+  "spotify api": SiNodedotjs,
   rabbitmq: SiRabbitmq,
   jwt: SiJsonwebtokens,
   markdown: SiGithub,
