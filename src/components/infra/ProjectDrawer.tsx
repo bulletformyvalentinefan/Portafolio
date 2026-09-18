@@ -140,9 +140,11 @@ function DrawerContent({
         </div>
 
         <div className="flex gap-2 pb-2">
-          <a href={meta.liveUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary flex-1">
-            <FiExternalLink className="h-4 w-4" /> Abrir demo
-          </a>
+          {meta.id !== "auto-deploy" ? (
+            <a href={meta.liveUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary flex-1">
+              <FiExternalLink className="h-4 w-4" /> Abrir demo
+            </a>
+          ) : null}
           {meta.githubUrl && meta.githubUrl !== meta.liveUrl && meta.id !== "auto-deploy" ? (
             <a href={meta.githubUrl} target="_blank" rel="noopener noreferrer" className="btn">
               <SiGithub className="h-4 w-4" /> GitHub

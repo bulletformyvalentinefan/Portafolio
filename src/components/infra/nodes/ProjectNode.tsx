@@ -60,17 +60,19 @@ export const ProjectNode = memo(function ProjectNode({ data }: NodeProps) {
         </div>
 
         <div className="flex items-center gap-2">
-          <a
-            href={meta.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
-            className="btn btn-primary btn-small"
-          >
-            {isStatic ? <SiGithub className="h-3.5 w-3.5" /> : null}
-            {isStatic ? "GitHub" : "Live"}
-          </a>
-          {meta.githubUrl && meta.githubUrl !== meta.liveUrl ? (
+          {meta.id !== "auto-deploy" ? (
+            <a
+              href={meta.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="btn btn-primary btn-small"
+            >
+              {isStatic ? <SiGithub className="h-3.5 w-3.5" /> : null}
+              {isStatic ? "GitHub" : "Live"}
+            </a>
+          ) : null}
+          {meta.githubUrl && meta.githubUrl !== meta.liveUrl && meta.id !== "auto-deploy" ? (
             <a
               href={meta.githubUrl}
               target="_blank"

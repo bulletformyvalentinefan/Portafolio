@@ -64,7 +64,7 @@ export const PROJECTS: ProjectMeta[] = [
     description: "Watchtower + GH Actions → GHCR, sin downtime.",
     tags: ["Watchtower", "GitHub Actions", "GHCR", "Caddy"],
     liveUrl: "https://github.com/bulletformyvalentinefan",
-    githubUrl: "https://github.com/bulletformyvalentinefan",
+    githubUrl: null,
     kumaId: null,
     arch: [
       { label: "GitHub Actions", sublabel: "Test + Build" },
