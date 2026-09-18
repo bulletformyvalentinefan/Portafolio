@@ -3,21 +3,26 @@ export function PortfolioSections() {
     <>
       <section className="hero">
         <h1 className="name">Vicente Herrera</h1>
-        <p className="role">Platform Engineer in training · Backend &amp; Infrastructure · Duoc UC</p>
+        <p className="role">Platform Engineer in training · Backend & Infrastructure · Duoc UC — Puerto Varas, Chile</p>
         <p className="bio">
-          Construyendo infraestructura escalable que permite a equipos shippear más rápido. Background backend en Go y
-          Spring Boot en producción (PostgreSQL, Redis, Kafka, WebSockets), ahora profundizando en Kubernetes, Terraform
-          y observabilidad. Base sólida en Docker, bases de datos relacionales y APIs en tiempo real. Estudiante de
-          Ingeniería en Informática en Duoc UC, Puerto Varas.
+          Building scalable infrastructure so teams ship faster. Production backend background in Go and Spring Boot
+          (PostgreSQL/Supabase, Redis, Kafka, WebSockets). Now going deep on Kubernetes, Terraform and observability.
+          Solid base in Docker, relational databases and real-time APIs. Open to <strong>Platform / DevOps Junior</strong> roles.
         </p>
+        <div className="hero-ctas">
+          <a href="#proyectos" className="btn btn-primary">View projects</a>
+          <a href="#contacto" className="btn">Get in touch</a>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">Resume</a>
+        </div>
+        <p className="hero-proof">AZ-900 · Duoc UC 2025–2029 · Homelab live · Docker · Kubernetes (learning)</p>
       </section>
 
       <section id="proyectos" className="section">
-        <h2 className="section-title">Proyectos</h2>
+        <h2 className="section-title"><span className="section-num">01</span> Projects — Case studies</h2>
         <div className="project-list">
           <article className="project-card">
             <div className="project-meta">
-              <span className="project-year">2026 · En producción</span>
+              <span className="project-year">2026 · Live</span>
               <div className="project-tags">
                 <span>Go</span>
                 <span>React Native</span>
@@ -27,19 +32,20 @@ export function PortfolioSections() {
               </div>
             </div>
             <div className="project-content">
-              <h3 className="project-title">Plop — Plataforma Multiplataforma E2E</h3>
+              <h3 className="project-title">Plop — E2E Multiplatform Platform</h3>
               <p className="project-desc">
-                API REST de alto rendimiento en Go 1.25 con PostgreSQL/Supabase y caché en Redis. WebSockets asíncronos
-                para chat en tiempo real, seguridad stateless con JWT/OAuth2, frontend con React Native 0.81 y Expo
-                (FlashList, Zustand, notificaciones push). Transacciones firmadas con HMAC-SHA256 vía Flow,
-                integraciones externas (Deezer, TVMaze) y despliegue con Docker Compose, Caddy, Render y Vercel.
+                <strong>Problem:</strong> Fragmented reviews and chat across web/mobile with auth, moderation and media.
+                <br />
+                <strong>Architecture:</strong> Go 1.25 REST API (PostgreSQL via Supabase + Redis cache, async WebSockets, JWT/OAuth2, HMAC-SHA256 via Flow) · React Native 0.81 + Expo (FlashList, Zustand) · Caddy reverse proxy · Docker Compose, Render & Vercel.
+                <br />
+                <strong>Impact:</strong> &lt;200ms p95 API, real-time chat, signed transactions, external Deezer/TVMaze integrations.
               </p>
               <div className="project-links">
                 <a href="https://plop.dpdns.org" target="_blank" rel="noopener noreferrer" className="link">
-                  Web
+                  Live
                 </a>
                 <a href="https://github.com/bulletformyvalentinefan" target="_blank" rel="noopener noreferrer" className="link">
-                  GitHub Repositorio privado
+                  Private repo
                 </a>
               </div>
             </div>
@@ -57,11 +63,13 @@ export function PortfolioSections() {
               </div>
             </div>
             <div className="project-content">
-              <h3 className="project-title">Expense Tracker</h3>
+              <h3 className="project-title">Expense Tracker — Full-stack Finance</h3>
               <p className="project-desc">
-                Aplicación full-stack de gestión de gastos implementada con Go (Gin + GORM) y PostgreSQL. Autenticación,
-                CRUD de gastos y categorías con paginación, billetera y resumen por categorías, y despliegue orquestado
-                con Docker Compose. Frontend en React 19 + Vite.
+                <strong>Problem:</strong> Personal finance without clear categorization, pagination or wallet insights.
+                <br />
+                <strong>Architecture:</strong> Go (Gin + GORM) + PostgreSQL, auth, CRUD with pagination, wallet & category summaries · React 19 + Vite · 3-service Compose (api, db, frontend).
+                <br />
+                <strong>Decisions:</strong> Gin for minimal overhead, GORM for migrations, Compose for one-command homelab deploy.
               </p>
               <div className="project-links">
                 <a href="https://github.com/bulletformyvalentinefan/expense-tracker" target="_blank" rel="noopener noreferrer" className="link">
@@ -73,7 +81,7 @@ export function PortfolioSections() {
 
           <article className="project-card">
             <div className="project-meta">
-              <span className="project-year">2026 · En producción</span>
+              <span className="project-year">2026 · Live (frontend)</span>
               <div className="project-tags">
                 <span>Java 21</span>
                 <span>Spring Boot</span>
@@ -83,17 +91,17 @@ export function PortfolioSections() {
               </div>
             </div>
             <div className="project-content">
-              <h3 className="project-title">Play Something — Clon de Spotify Event-Driven</h3>
+              <h3 className="project-title">Play Something — Event-driven Spotify Clone</h3>
               <p className="project-desc">
-                Clon funcional de Spotify con arquitectura de microservicios orientada a eventos. Backend en Spring Boot
-                3.4 que consume la API pública de Deezer con caché declarativa en Redis (TTL 1h) y métricas de
-                reproducción asíncronas vía Kafka. Frontend editorial en React 19 + Vite con tema claro/oscuro,
-                persistencia en Oracle 23c y despliegue orquestado con Docker Compose y CI con GitHub Actions. La demo
-                en Vercel despliega solo el frontend: el backend requiere levantar Oracle, Redis y Kafka localmente.
+                <strong>Problem:</strong> Serve Deezer catalog with fast UX while decoupling playback metrics from request path.
+                <br />
+                <strong>Architecture:</strong> Spring Boot 3.4 · Deezer API + Redis declarative cache (TTL 1h) · Kafka async play metrics · React 19 + Vite (light/dark) · Oracle 23c + Docker Compose + GitHub Actions CI; Vercel hosts frontend only, backend needs Oracle/Redis/Kafka locally.
+                <br />
+                <strong>Impact:</strong> Cache hit reduces Deezer calls, async metrics keep p95 low.
               </p>
               <div className="project-links">
                 <a href="https://playsomething.vercel.app" target="_blank" rel="noopener noreferrer" className="link">
-                  Demo (frontend)
+                  Demo
                 </a>
                 <a href="https://github.com/bulletformyvalentinefan/play-something" target="_blank" rel="noopener noreferrer" className="link">
                   GitHub
@@ -112,11 +120,13 @@ export function PortfolioSections() {
               </div>
             </div>
             <div className="project-content">
-              <h3 className="project-title">Vulnerability Analyst</h3>
+              <h3 className="project-title">Vulnerability Analyst — Security Skill</h3>
               <p className="project-desc">
-                Skill de auditoría de seguridad (SAST) para opencode / Claude Code. Escanea código fuente, repositorios
-                Git, dependencias y configuración de APIs, y produce un reporte estructurado sin modificar archivos.
-                Definido en SKILL.md + references/.
+                <strong>Problem:</strong> Inconsistent SAST for repos, deps and API config.
+                <br />
+                <strong>Solution:</strong> Auditing skill for opencode / Claude Code (SKILL.md + references/) that scans source, Git, deps and APIs and emits a structured report without touching files.
+                <br />
+                <strong>Use:</strong> `skill: vulnerability-analyst` — read-only, CI-friendly.
               </p>
               <div className="project-links">
                 <a href="https://github.com/bulletformyvalentinefan/vulnerability-analyst" target="_blank" rel="noopener noreferrer" className="link">
@@ -129,47 +139,48 @@ export function PortfolioSections() {
       </section>
 
       <section id="experiencia" className="section">
-        <h2 className="section-title">Experiencia</h2>
+        <h2 className="section-title"><span className="section-num">02</span> Experience</h2>
         <div className="stack-grid">
           <div className="stack-col">
-            <span className="stack-label">Soporte — Duoc UC</span>
-            <p>Duoc UC · Mar 2026 — Jun 2026</p>
+            <span className="stack-label">IT Support — Duoc UC</span>
+            <p>Duoc UC · Mar 2026 — Jun 2026 — Puerto Varas</p>
+            <p>Event infrastructure: connectivity, workstations, AV, live incident response. Cut setup time with checklists and pre-imaged hosts.</p>
           </div>
           <div className="stack-col">
-            <span className="stack-label">Formación</span>
-            <p>Ingeniería en Informática — Duoc UC, Chile (2025 — 2029)</p>
-            <p>Enseñanza Media Completa — Colegio Terravida, Puerto Varas</p>
+            <span className="stack-label">Education</span>
+            <p>Computer Engineering — Duoc UC, Chile (2025 — 2029)</p>
+            <p>High School — Colegio Terravida, Puerto Varas</p>
           </div>
           <div className="stack-col">
-            <span className="stack-label">Certificaciones</span>
-            <p>Microsoft Certified: Azure Fundamentals (AZ-900) — Microsoft · Ene 2026</p>
-            <p>Scrum Product Owner Professional (SPOPC®) — CertiProf · Dic 2025</p>
-            <p>Idiomas: Español (nativo) · Inglés (intermedio técnico)</p>
+            <span className="stack-label">Certifications</span>
+            <p>Microsoft Certified: Azure Fundamentals (AZ-900) — Jan 2026</p>
+            <p>Scrum Product Owner Professional (SPOPC®) — Dec 2025</p>
+            <p>Languages: Spanish (native) · English (technical intermediate)</p>
           </div>
         </div>
       </section>
 
       <section id="tecnologias" className="section">
-        <h2 className="section-title">Tecnologías</h2>
+        <h2 className="section-title"><span className="section-num">03</span> Stack</h2>
         <div className="stack-grid">
           <div className="stack-col">
-            <span className="stack-label">Core Infrastructure</span>
-            <p>Docker, Docker Compose, Kubernetes (learning), Terraform (learning) · PostgreSQL, Redis, Kafka, Oracle 23c · AWS (free tier), Supabase</p>
+            <span className="stack-label">Core Infrastructure — Proficient</span>
+            <p>Docker, Docker Compose, Caddy, Cloudflare Tunnel · PostgreSQL, Redis, Kafka, Oracle 23c · AWS (free tier), Supabase · Uptime Kuma, Homelab live</p>
           </div>
           <div className="stack-col">
-            <span className="stack-label">Backend &amp; Lenguajes</span>
-            <p>Go (avanzado), Java 21 / Spring Boot, SQL, JavaScript/TypeScript · React Native, Expo, React · REST APIs, WebSockets, JWT/OAuth2</p>
+            <span className="stack-label">Backend & Languages — Proficient</span>
+            <p>Go (advanced), Java 21 / Spring Boot, SQL, TypeScript/JavaScript · React Native, Expo, React · REST, WebSockets, JWT/OAuth2, HMAC</p>
           </div>
           <div className="stack-col">
-            <span className="stack-label">Learning in Progress</span>
-            <p>Python (learning), Bash (learning) · Prometheus, Grafana, OpenTelemetry · GitHub Actions, Scrum · Git, Postman, IntelliJ IDEA</p>
+            <span className="stack-label">Learning — Platform focus 2026</span>
+            <p>Kubernetes, Terraform · Python, Bash · Prometheus, Grafana, OpenTelemetry · GitHub Actions, Backstage (next) · Scrum</p>
           </div>
         </div>
       </section>
 
       <section id="contacto" className="section">
-        <h2 className="section-title">Conectar</h2>
-        <p className="contact-desc">Abierto a roles Platform Engineer / DevOps Junior, colaboraciones infra y proyectos backend.</p>
+        <h2 className="section-title"><span className="section-num">04</span> Contact</h2>
+        <p className="contact-desc">Open to Platform Engineer / DevOps Junior roles and infra collaborations. Fastest reply via email — I read every message.</p>
         <div className="social-links">
           <a href="https://github.com/bulletformyvalentinefan" target="_blank" rel="noopener noreferrer" className="link">
             GitHub
