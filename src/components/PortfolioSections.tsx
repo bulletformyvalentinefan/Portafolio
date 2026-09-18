@@ -5,8 +5,8 @@ export function PortfolioSections() {
         <h1 className="name">Vicente Herrera</h1>
         <p className="role">Platform Engineer in training · Backend & Infrastructure · Duoc UC — Puerto Varas, Chile</p>
         <p className="bio">
-          Building scalable infrastructure so teams ship faster. Production backend background in Go and Spring Boot
-          (PostgreSQL/Supabase, Redis, Kafka, WebSockets). Now going deep on Kubernetes, Terraform and observability.
+          Building scalable infrastructure so teams ship faster. Production backend background in Go
+          (PostgreSQL/Supabase, Redis, WebSockets). Now going deep on Kubernetes, Terraform and observability.
           Solid base in Docker, relational databases and real-time APIs. Open to <strong>Platform / DevOps Junior</strong> roles.
         </p>
         <div className="hero-ctas">
@@ -81,23 +81,23 @@ export function PortfolioSections() {
 
           <article className="project-card">
             <div className="project-meta">
-              <span className="project-year">2026 · Live (frontend)</span>
+              <span className="project-year">2026 · Live</span>
               <div className="project-tags">
-                <span>Java 21</span>
-                <span>Spring Boot</span>
-                <span>Oracle 23c</span>
+                <span>Go</span>
+                <span>React</span>
                 <span>Redis</span>
-                <span>Kafka</span>
+                <span>Docker</span>
+                <span>Spotify API</span>
               </div>
             </div>
             <div className="project-content">
-              <h3 className="project-title">Play Something — Event-driven Spotify Clone</h3>
+              <h3 className="project-title">Play Something — Go Spotify Proxy</h3>
               <p className="project-desc">
-                <strong>Problem:</strong> Serve Deezer catalog with fast UX while decoupling playback metrics from request path.
+                <strong>Problem:</strong> Play Spotify outside official player with homelab cache and auth flow.
                 <br />
-                <strong>Architecture:</strong> Spring Boot 3.4 · Deezer API + Redis declarative cache (TTL 1h) · Kafka async play metrics · React 19 + Vite (light/dark) · Oracle 23c + Docker Compose + GitHub Actions CI; Vercel hosts frontend only, backend needs Oracle/Redis/Kafka locally.
+                <strong>Architecture:</strong> Go 1.26 proxy (<code>chi</code> + <code>go-librespot</code> + <code>rs/cors</code>) · Redis 7 (appendonly) · React 19 + Vite + react-router · Docker Compose (redis, proxy :8081/:8989, frontend :80, GHCR images, healthchecks).
                 <br />
-                <strong>Impact:</strong> Cache hit reduces Deezer calls, async metrics keep p95 low.
+                <strong>Impact:</strong> Local cache, homelab deploy one-command, aligns with portfolio Redis/Docker stack.
               </p>
               <div className="project-links">
                 <a href="https://playsomething.vercel.app" target="_blank" rel="noopener noreferrer" className="link">
@@ -165,11 +165,11 @@ export function PortfolioSections() {
         <div className="stack-grid">
           <div className="stack-col">
             <span className="stack-label">Core Infrastructure — Proficient</span>
-            <p>Docker, Docker Compose, Caddy, Cloudflare Tunnel · PostgreSQL, Redis, Kafka, Oracle 23c · AWS (free tier), Supabase · Uptime Kuma, Homelab live</p>
+            <p>Docker, Docker Compose, Caddy, Cloudflare Tunnel · PostgreSQL, Redis · Supabase · Uptime Kuma, Homelab live</p>
           </div>
           <div className="stack-col">
             <span className="stack-label">Backend & Languages — Proficient</span>
-            <p>Go (advanced), Java 21 / Spring Boot, SQL, TypeScript/JavaScript · React Native, Expo, React · REST, WebSockets, JWT/OAuth2, HMAC</p>
+            <p>Go (advanced), SQL, TypeScript/JavaScript · React, React Native, Expo · REST, WebSockets, JWT/OAuth2, HMAC · Gin, chi</p>
           </div>
           <div className="stack-col">
             <span className="stack-label">Learning — Platform focus 2026</span>
