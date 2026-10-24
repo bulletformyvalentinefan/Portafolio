@@ -1,16 +1,16 @@
 # Etapa 1: Compilación del sitio web
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 WORKDIR /app
 
-# Instalar pnpm
-RUN corepack enable && corepack prepare pnpm@latest --activate
+# pnpm fijado para builds reproducibles (pnpm 11+ requiere Node >= 22)
+RUN corepack enable && corepack prepare pnpm@12.15.0 --activate
 
-# Copiar archivos de dependencias
-COPY package.json pnpm-lock.yaml ./
+# Copiar archivos de dependencias.
+# pnpm-workspace.yaml es obligatorio: ahi vive allowBuilds (esbuild),
+# sin el pnpm instal con strictDepBuilds y falla con ERR_PNPM_IGNORED_BUILDS.
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 
-# Configurar pnpm para que no bloquee los scripts de compilación como esbuild
-RUN pnpm config set ignore-scripts false
-RUN pnpm install --frozen-lockfile --unsafe-perm
+RUN pnpm install --frozen-lockfile
 
 # Copiar el código fuente y compilar
 COPY . .
