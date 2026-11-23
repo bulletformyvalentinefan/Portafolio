@@ -28,4 +28,4 @@ Imagen Docker multi-arquitectura (amd64/arm64) construida y publicada en GHCR po
 ## Autor
 
 - GitHub: [@bulletformyvalentinefan](https://github.com/bulletformyvalentinefan)
-- LinkedIn: [vicente-herrera-solis](www.linkedin.com/in/vicenteherrerasolis)
+- LinkedIn: [vicente-herrera-solis](https://www.linkedin.com/in/vicenteherrerasolis/)
