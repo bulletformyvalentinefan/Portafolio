@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { FiSun, FiMoon } from "react-icons/fi";
-import { InfrastructureCanvas } from "./components/infra/InfrastructureCanvas";
 import { PortfolioSections } from "./components/PortfolioSections";
 
 export default function App() {
@@ -29,7 +28,6 @@ export default function App() {
         </a>
         <div className="header-actions">
           <nav className="nav">
-            <a href="#infra">Infra</a>
             <a href="#proyectos">Projects</a>
             <a href="#experiencia">Experience</a>
             <a href="#tecnologias">Stack</a>
@@ -50,17 +48,6 @@ export default function App() {
       </header>
 
       <main>
-        <section id="infra" className="section">
-          <h2 className="section-title">Live infrastructure — Homelab</h2>
-          <p className="contact-desc">Drag, pan and zoom. Click a card to inspect. Interaction only inside the frame.</p>
-          <div className="infra-area relative overflow-hidden h-[480px] md:h-[560px] lg:h-[600px]">
-            <InfrastructureCanvas />
-            <div className="infra-area__hint pointer-events-none absolute left-3 top-3 z-10 hidden md:inline-flex items-center gap-1.5 rounded-full border bg-[var(--node-bg)]/80 backdrop-blur px-2.5 py-1 text-[11px] font-mono" style={{ borderColor: "var(--node-border)", color: "var(--node-muted)" }}>
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" /> Interactive area
-            </div>
-          </div>
-        </section>
-
         <PortfolioSections />
       </main>
 

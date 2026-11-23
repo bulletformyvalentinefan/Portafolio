@@ -1,14 +1,14 @@
 # vh.dev
 
-Portafolio personal de [Vicente Herrera](https://github.com/bulletformyvalentinefan) — Backend Developer.
+Portafolio personal de [Vicente Herrera](https://github.com/bulletformyvalentinefan) — Cloud & Platform Engineer.
 
 Sitio estático minimalista en blanco y negro con enfoque editorial: filas de proyectos, tipografías Inter + JetBrains Mono y soporte de tema claro/oscuro.
 
 ## Stack
 
-- HTML5, CSS3 (variables, `clamp`, `backdrop-filter`) y JavaScript vanilla
-- Sin frameworks ni dependencias de build
-- Tipografías: [Inter](https://fonts.google.com/specimen/Inter) + [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+- React 19 + Vite + TypeScript
+- Tailwind CSS 4
+- Sin backend: contenido estático
 
 ## Características
 
@@ -19,18 +19,23 @@ Sitio estático minimalista en blanco y negro con enfoque editorial: filas de pr
 
 ## Ejecutar localmente
 
-Abre `index.html` en el navegador o sirve la carpeta con un servidor estático:
+```sh
+pnpm install
+pnpm dev
+```
+
+Build de producción:
 
 ```sh
-npx serve .
+pnpm build
 ```
 
 ## Estructura
 
 ```
-index.html     # Contenido y estructura
-style.css      # Estilos (variables de tema, layout, responsive)
-script.js      # Toggle de tema claro/oscuro
+src/App.tsx                        # Layout, header, tema
+src/components/PortfolioSections.tsx # Hero, proyectos, experiencia, stack, contacto
+src/index.css                      # Estilos (variables de tema, layout, responsive)
 ```
 
 ## Autor

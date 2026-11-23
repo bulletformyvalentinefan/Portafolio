@@ -2,19 +2,21 @@ export function PortfolioSections() {
   return (
     <>
       <section className="hero">
-        <h1 className="name">Vicente Herrera</h1>
-        <p className="role">Platform Engineer in training · Backend & Infrastructure · Duoc UC — Puerto Varas, Chile</p>
+        <h1 className="name">Vicente Herrera Solis</h1>
+        <p className="role">Cloud &amp; Platform Engineer · DevOps · Infrastructure · Chile</p>
         <p className="bio">
-          Building scalable infrastructure so teams ship faster. Production backend background in Go
-          (PostgreSQL/Supabase, Redis, WebSockets). Now going deep on Kubernetes, Terraform and observability.
-          Solid base in Docker, relational databases and real-time APIs. Open to <strong>Platform / DevOps Junior</strong> roles.
+          I design, automate and operate cloud infrastructure so teams ship faster. Deploy containers
+          with Docker and GitHub Actions to Oracle Cloud (k3s/ARM64), run Go services with PostgreSQL
+          and Redis, and monitor what runs in production. Certified in Azure Fundamentals (AZ-900),
+          building across AWS, Azure and OCI. Going deep on Kubernetes, Terraform and observability.
+          Open to <strong>Cloud, Platform and DevOps engineering</strong> roles.
         </p>
         <div className="hero-ctas">
           <a href="#proyectos" className="btn btn-primary">View projects</a>
           <a href="#contacto" className="btn">Get in touch</a>
           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">Resume</a>
         </div>
-        <p className="hero-proof">AZ-900 · Duoc UC 2025–2029 · Homelab live · Docker · Kubernetes (learning)</p>
+        <p className="hero-proof">AZ-900 · AWS · Azure · Oracle Cloud (OCI) · Docker · Kubernetes · Terraform · GitHub Actions · Go</p>
       </section>
 
       <section id="proyectos" className="section">
@@ -69,7 +71,7 @@ export function PortfolioSections() {
                 <br />
                 <strong>Architecture:</strong> Go (Gin + GORM) + PostgreSQL, auth, CRUD with pagination, wallet & category summaries · React 19 + Vite · 3-service Compose (api, db, frontend).
                 <br />
-                <strong>Decisions:</strong> Gin for minimal overhead, GORM for migrations, Compose for one-command homelab deploy.
+                <strong>Decisions:</strong> Gin for minimal overhead, GORM for migrations, Compose for single-command deploy.
               </p>
               <div className="project-links">
                 <a href="https://github.com/bulletformyvalentinefan/expense-tracker" target="_blank" rel="noopener noreferrer" className="link">
@@ -93,11 +95,11 @@ export function PortfolioSections() {
             <div className="project-content">
               <h3 className="project-title">Play Something — Go Spotify Proxy</h3>
               <p className="project-desc">
-                <strong>Problem:</strong> Play Spotify outside official player with homelab cache and auth flow.
+                <strong>Problem:</strong> Play Spotify outside official player with a local cache and auth flow.
                 <br />
                 <strong>Architecture:</strong> Go 1.26 proxy (<code>chi</code> + <code>go-librespot</code> + <code>rs/cors</code>) · Redis 7 (appendonly) · React 19 + Vite + react-router · Docker Compose (redis, proxy :8081/:8989, frontend :80, GHCR images, healthchecks).
                 <br />
-                <strong>Impact:</strong> Local cache, homelab deploy one-command, aligns with portfolio Redis/Docker stack.
+                <strong>Impact:</strong> Local cache, single-command deploy, aligns with portfolio Redis/Docker stack.
               </p>
               <div className="project-links">
                 <a href="https://playsomething.vercel.app" target="_blank" rel="noopener noreferrer" className="link">
@@ -143,13 +145,13 @@ export function PortfolioSections() {
         <div className="stack-grid">
           <div className="stack-col">
             <span className="stack-label">IT Support — Duoc UC</span>
-            <p>Duoc UC · Mar 2026 — Jun 2026 — Puerto Varas</p>
+            <p>Duoc UC · Mar 2026 — Jun 2026 · Chile</p>
             <p>Event infrastructure: connectivity, workstations, AV, live incident response. Cut setup time with checklists and pre-imaged hosts.</p>
           </div>
           <div className="stack-col">
             <span className="stack-label">Education</span>
             <p>Computer Engineering — Duoc UC, Chile (2025 — 2029)</p>
-            <p>High School — Colegio Terravida, Puerto Varas</p>
+            <p>High School — Colegio Terravida, Chile</p>
           </div>
           <div className="stack-col">
             <span className="stack-label">Certifications</span>
@@ -164,23 +166,23 @@ export function PortfolioSections() {
         <h2 className="section-title"><span className="section-num">03</span> Stack</h2>
         <div className="stack-grid">
           <div className="stack-col">
-            <span className="stack-label">Core Infrastructure — Proficient</span>
-            <p>Docker, Docker Compose, Caddy, Cloudflare Tunnel · PostgreSQL, Redis · Supabase · Uptime Kuma, Homelab live</p>
+            <span className="stack-label">Cloud & Infrastructure</span>
+            <p>AWS · Microsoft Azure (AZ-900) · Oracle Cloud (OCI) · Docker, Docker Compose, Linux · Caddy, Cloudflare Tunnel</p>
           </div>
           <div className="stack-col">
-            <span className="stack-label">Backend & Languages — Proficient</span>
-            <p>Go (advanced), SQL, TypeScript/JavaScript · React, React Native, Expo · REST, WebSockets, JWT/OAuth2, HMAC · Gin, chi</p>
+            <span className="stack-label">DevOps & Automation</span>
+            <p>GitHub Actions, GHCR · Terraform, Kubernetes/k3s (in progress) · Prometheus, Grafana, OpenTelemetry (in progress) · Bash, Git</p>
           </div>
           <div className="stack-col">
-            <span className="stack-label">Learning — Platform focus 2026</span>
-            <p>Kubernetes, Terraform · Python, Bash · Prometheus, Grafana, OpenTelemetry · GitHub Actions, Backstage (next) · Scrum</p>
+            <span className="stack-label">Backend & Data</span>
+            <p>Go (advanced) · PostgreSQL, Redis, Supabase · REST, WebSockets, JWT/OAuth2, HMAC · React, React Native</p>
           </div>
         </div>
       </section>
 
       <section id="contacto" className="section">
         <h2 className="section-title"><span className="section-num">04</span> Contact</h2>
-        <p className="contact-desc">Open to Platform Engineer / DevOps Junior roles and infra collaborations. Fastest reply via email — I read every message.</p>
+        <p className="contact-desc">Open to Cloud, Platform and DevOps engineering roles and infrastructure collaborations. Fastest reply via email — I read every message.</p>
         <div className="social-links">
           <a href="https://github.com/bulletformyvalentinefan" target="_blank" rel="noopener noreferrer" className="link">
             GitHub
