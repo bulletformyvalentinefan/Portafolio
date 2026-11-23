@@ -1,42 +1,29 @@
-# vh.dev
+# vh.dev — Portafolio de Vicente Herrera Solis
 
-Portafolio personal de [Vicente Herrera](https://github.com/bulletformyvalentinefan) — Cloud & Platform Engineer.
+**Cloud & Platform Engineer · DevOps · Infrastructure · Chile**
 
-Sitio estático minimalista en blanco y negro con enfoque editorial: filas de proyectos, tipografías Inter + JetBrains Mono y soporte de tema claro/oscuro.
+Sitio personal de presentación profesional: proyectos en producción, experiencia, certificaciones y stack técnico. El contenido está en inglés; este README documenta qué es y qué muestra.
 
-## Stack
+## Qué muestra
 
-- React 19 + Vite + TypeScript
-- Tailwind CSS 4
-- Sin backend: contenido estático
+- **Posicionamiento** — Cloud, Platform y DevOps, con AWS, Azure (AZ-900) y Oracle Cloud.
+- **Proyectos** — Plop (plataforma end-to-end en Go + React Native), Expense Tracker, Play Something y Vulnerability Analyst.
+- **Experiencia** — soporte e infraestructura de eventos en Duoc UC.
+- **Formación y certificaciones** — Ingeniería en Informática (Duoc UC), AZ-900 y SPOPC®.
+- **Stack** — Cloud & Infrastructure, DevOps & Automation, Backend & Data.
+- **Contacto** — GitHub, LinkedIn y email.
 
-## Características
+## Diseño
 
-- Tema claro/oscuro con persistencia en `localStorage` y detección de preferencia del sistema
-- Header sticky con blur (`backdrop-filter`)
-- Diseño responsive (móvil / tablet / escritorio)
-- Accesibilidad: `focus-visible` y respeto a `prefers-reduced-motion`
+Estética editorial en blanco y negro, tipografías Inter + JetBrains Mono, tema claro/oscuro persistente, layout responsive y foco visible para navegación por teclado.
 
-## Ejecutar localmente
+## Stack del sitio
 
-```sh
-pnpm install
-pnpm dev
-```
+React 19 · Vite · TypeScript · Tailwind CSS 4 · react-icons. Sin backend: contenido estático.
 
-Build de producción:
+## Despliegue
 
-```sh
-pnpm build
-```
-
-## Estructura
-
-```
-src/App.tsx                        # Layout, header, tema
-src/components/PortfolioSections.tsx # Hero, proyectos, experiencia, stack, contacto
-src/index.css                      # Estilos (variables de tema, layout, responsive)
-```
+Imagen Docker multi-arquitectura (amd64/arm64) construida y publicada en GHCR por GitHub Actions en cada push a `main`, servida desde un clúster k3s en Oracle Cloud.
 
 ## Autor
 
